@@ -11,7 +11,7 @@ const Modal = ({
 }) => {
   const [formData, setFormData] = useState({
     name: "",
-    positon: "",  // Backend'de kullanılan yanlış yazım
+    positon: "",  
     company: "",
     phone: "",
     email: "",
@@ -21,7 +21,7 @@ const Modal = ({
     if (contact) {
       setFormData({
         name: contact.name || "",
-        positon: contact.positon || "",  // Burada da doğru şekilde eşleştiriyoruz
+        positon: contact.positon || "",  
         company: contact.company || "",
         phone: contact.phone || "",
         email: contact.email || "",
@@ -90,7 +90,7 @@ const Modal = ({
             <label>Pozisyon:</label>
             <input
               type="text"
-              name="positon"  // Burada da positon kullanıyoruz
+              name="positon"  
               value={formData.positon}
               onChange={handleChange}
             />
