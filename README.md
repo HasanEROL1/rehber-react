@@ -11,11 +11,11 @@ React.js kullanılarak geliştirilmiş ve veriler **JSON Server (Fake API)** ile
 - ⚡ JSON Server ile çalışır
 
 ## 🛠️ Kurulum & Çalıştırma
-#terminal kodları:
-npm install,
-npx json-server --watch db.json --port 3000,
-npm start
-##🛠️ Kullanılan Teknolojiler
+#terminal kodları:<br>
+npm install,<br>
+npx json-server --watch db.json --port 3000,<br>
+npm start<br>
+##🛠️ Kullanılan Teknolojiler<br>
 ⚛️ React.js
 🎨 SCSS
 🚀 Axios
