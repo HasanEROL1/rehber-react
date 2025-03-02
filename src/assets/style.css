@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f2f2;
+  color: black;
+  font-family: "Cairo";
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Cairo";
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.4s;
+  font-size: 16px;
+}
+button:hover {
+  background: rgba(128, 128, 128, 0.244);
+  filter: brightness(60%);
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  font-family: "Cairo";
+  border-radius: 5px;
+}
+
+.app {
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 750px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
+header div {
+  display: flex;
+  gap: 20px;
+}
+header div button {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 20px;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+header div .ns {
+  width: 50px;
+}
+@media (max-width: 650px) {
+  header div .ns {
+    display: none;
+  }
+}
+header div .add {
+  display: flex;
+  gap: 10px;
+  background-color: #6418c3;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+@media (max-width: 750px) {
+  header div .add {
+    padding: 5px;
+    white-space: nowrap;
+  }
+}
+header div .add span {
+  font-size: 17px;
+}
+header div form {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header div form button {
+  font-size: 20px;
+  padding: 0 10px;
+  color: #6418c3;
+  box-shadow: none;
+}
+header div form input {
+  width: 300px;
+}
+@media (max-width: 750px) {
+  header div form input {
+    width: 200px;
+  }
+}
+
+main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.card:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.card:hover .bottom div span:nth-of-type(1) {
+  background-color: #6418c3;
+  color: white;
+}
+.card h1 {
+  background-color: #6418c3;
+  width: 18%;
+  aspect-ratio: 1;
+  min-width: 60px;
+  text-align: center;
+  color: white;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 10px;
+}
+.card p:nth-of-type(1) {
+  color: gray;
+}
+.card p:nth-of-type(2) {
+  color: #6418c3;
+  margin-bottom: 20px;
+}
+.card .bottom div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.card .bottom div span:nth-of-type(1) {
+  background-color: rgba(128, 0, 128, 0.291);
+  padding: 8px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  color: #6418c3;
+  transition: all 0.4s;
+}
+.card .bottom div span:nth-of-type(2) {
+  font-weight: 700;
+}
+.card .buttons {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card .buttons button {
+  color: white;
+  width: 35px;
+  aspect-ratio: 1;
+}
+.card .buttons button:nth-child(1) {
+  background-color: rgb(0, 157, 255);
+}
+.card .buttons button:nth-child(2) {
+  background-color: crimson;
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.63);
+  inset: 0;
+  display: grid;
+  place-items: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.modal .modal-inner {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 400px;
+  width: 50%;
+  max-height: 700px;
+  min-height: 500px;
+}
+.modal .modal-inner .modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .modal-inner .modal-head button {
+  border: 1px solid gray;
+  height: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+.modal .modal-inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.modal .modal-inner form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.modal .modal-inner form .field label {
+  font-weight: 700;
+}
+.modal .modal-inner form .field input {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  transition: border-color 0.3s;
+}
+.modal .modal-inner form .buttons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 20px;
+}
+.modal .modal-inner form .buttons button {
+  padding: 5px 20px;
+  color: white;
+}
+.modal .modal-inner form .buttons button:nth-of-type(1) {
+  background-color: gray;
+}
+.modal .modal-inner form .buttons button:nth-of-type(2) {
+  background-color: #6418c3;
+}/*# sourceMappingURL=style.css.map */
